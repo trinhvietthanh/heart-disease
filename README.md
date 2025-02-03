@@ -125,7 +125,7 @@ Start the server
 
 ```bash
   python manage.py runserver
-```
+```  
 
 ## Model Training(Machine Learning)
 

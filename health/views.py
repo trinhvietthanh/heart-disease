@@ -36,6 +36,12 @@ def Admin_Home(request):
     d = {'dis':dis.count(),'pat':pat.count(),'doc':doc.count(),'feed':feed.count()}
     return render(request,'admin_home.html',d)
 
+def policy_doctor(request):
+    return render(request,'doctor_policy.html')
+
+def policy_patient(request):
+    return render(request,'patient_policy.html')
+
 @login_required(login_url="login")
 def assign_status(request,pid):
     doctor = Doctor.objects.get(id=pid)
@@ -113,6 +119,15 @@ def Login_admin(request):
     d = {'error': error}
     return render(request, 'admin_login.html', d)
 
+def choose_account_type(request):
+    return render(request, 'choose_account_type.html')
+
+def create_doctor_account(request):
+    return render(request, 'create_doctor_account.html')
+
+def create_user_account(request):
+    return render(request, 'create_user_account.html')
+
 def Signup_User(request):
     error = ""
     if request.method == 'POST':
@@ -134,7 +149,30 @@ def Signup_User(request):
             Doctor.objects.create(dob=d,image=im,user=user,contact=con,address=add,status=2)
         error = "create"
     d = {'error':error}
-    return render(request,'register.html',d)
+    return render(request,'register_patient.html',d)
+
+def signup_doctor(request):
+    error = ""
+    if request.method == 'POST':
+        f = request.POST['fname']
+        l = request.POST['lname']
+        u = request.POST['uname']
+        e = request.POST['email']
+        p = request.POST['pwd']
+        d = request.POST['dob']
+        con = request.POST['contact']
+        add = request.POST['add']
+        type = request.POST['type']
+        im = request.FILES['image']
+        dat = datetime.date.today()
+        user = User.objects.create_user(email=e, username=u, password=p, first_name=f,last_name=l)
+        if type == "Patient":
+            Patient.objects.create(user=user,contact=con,address=add,image=im,dob=d)
+        else:
+            Doctor.objects.create(dob=d,image=im,user=user,contact=con,address=add,status=2)
+        error = "create"
+    d = {'error':error}
+    return render(request,'register_doctor.html',d)
 
 def Logout(request):
     logout(request)
@@ -210,6 +248,8 @@ def add_doctor(request,pid=None):
     d = {"doctor": doctor}
     return render(request, 'add_doctor.html', d)
 
+
+
 @login_required(login_url="login")
 def add_heartdetail(request):
     if request.method == "POST":
@@ -229,7 +269,7 @@ def add_heartdetail(request):
                 continue
             list_data.append(value[0])
 
-        # list_data = [57, 0, 1, 130, 236, 0, 0, 174, 0, 0.0, 1, 1, 2]
+        list_data = [57, 0, 1, 130, 236, 0, 0, 174, 0, 0.0, 1, 1, 2]
         accuracy,pred = prdict_heart_disease(list_data)
         patient = Patient.objects.get(user=request.user)
         Search_Data.objects.create(patient=patient, prediction_accuracy=accuracy, result=pred[0], values_list=list_data)
@@ -398,3 +438,8 @@ def sent_feedback(request):
         Feedback.objects.create(user=username, messages=message)
         terror = "create"
     return render(request, 'sent_feedback.html',{'terror':terror})
+
+@login_required(login_url="login")
+def view_patient_result(request, pid):
+    patient = Patient.objects.get(id=pid)
+    return render(request,'view_patient_result.html',{'patient':patient})

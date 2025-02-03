@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block body %}
+<h2>Patient Information & Prediction Result</h2>
+
+    <h3>Patient Details</h3>
+    <ul>
+        <li><strong>Age:</strong> {{ patient_data.age }}</li>
+        <li><strong>Place of Study:</strong> {{ patient_data.origin }}</li>
+        <li><strong>Sex:</strong> {{ patient_data.sex }}</li>
+        <li><strong>Chest Pain Type:</strong> {{ patient_data.cp }}</li>
+        <li><strong>Resting Blood Pressure:</strong> {{ patient_data.trestbps }}</li>
+        <li><strong>Serum Cholesterol:</strong> {{ patient_data.chol }}</li>
+        <li><strong>Fasting Blood Sugar > 120 mg/dl:</strong> {{ patient_data.fbs }}</li>
+        <li><strong>Resting Electrocardiographic Results:</strong> {{ patient_data.restecg }}</li>
+        <li><strong>Maximum Heart Rate Achieved:</strong> {{ patient_data.thalach }}</li>
+        <li><strong>Exercise-induced Angina:</strong> {{ patient_data.exang }}</li>
+        <li><strong>ST Depression:</strong> {{ patient_data.oldpeak }}</li>
+        <li><strong>Slope of the Peak Exercise ST Segment:</strong> {{ patient_data.slope }}</li>
+        <li><strong>Number of Major Vessels:</strong> {{ patient_data.ca }}</li>
+        <li><strong>Thalassemia:</strong> {{ patient_data.thal }}</li>
+    </ul>
+
+    <h3>Prediction Result</h3>
+    <p><strong>Prediction:</strong> {{ prediction }}</p>
+    <p><strong>Prediction Accuracy:</strong> {{ accuracy }}%</p>
+
+{% endblock %}

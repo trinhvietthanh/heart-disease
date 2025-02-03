@@ -51,3 +51,17 @@ class Feedback(models.Model):
 
     def __str__(self):
         return self.user.user.username
+
+class PatientDetail(models.Model):
+    patient = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    chest_pain = models.CharField(max_length=100, null=True)
+    trestbps = models.CharField(max_length=100, null=True)
+    chol = models.CharField(max_length=100, null=True)
+    fbs = models.CharField(max_length=100, null=True)
+    restecg = models.CharField(max_length=100, null=True)
+    thalach = models.CharField(max_length=100, null=True)
+    exang = models.CharField(max_length=100, null=True)
+    oldpeak = models.CharField(max_length=100, null=True)
+    slope = models.CharField(max_length=100, null=True)
+    ca = models.CharField(max_length=100, null=True)
+    thal = models.CharField(max_length=100, null=True)

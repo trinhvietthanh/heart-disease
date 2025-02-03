@@ -1,0 +1,50 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block body %}
+<!-- Page for Selecting Account Type -->
+<section class="account-selection py-5">
+    <div class="container py-xl-5 py-lg-3">
+        <div class="title-section mb-md-5 mb-4">
+            <h3 class="w3ls-title text-uppercase text-dark font-weight-bold text-center">Select Account Type</h3>
+        </div>
+        <div class="row justify-content-center">
+            <!-- Card for Patient Account -->
+            <div class="col-md-5 mb-4">
+                <div class="card shadow-lg border-0 rounded-lg h-100" style="cursor: pointer; transition: transform 0.3s ease;" onclick="window.location.href='/signup-patient'">
+                    <img src="{% static 'images/patient.png' %}" class="card-img-top" alt="Patient Registration">
+                    <div class="card-body text-center">
+                        <h4 class="card-title text-primary">Create Account as Patient</h4>
+                        <p class="card-text text-muted">Register as a patient to access health services, consultations, and predictions.</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <button class="btn btn-primary w-100">Register as Patient</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card for Doctor Account -->
+            <div class="col-md-5 mb-4">
+                <div class="card shadow-lg border-0 rounded-lg h-100" style="cursor: pointer; transition: transform 0.3s ease;" onclick="window.location.href='/signup-doctor'">
+                    <img src="{% static 'images/doctor.avif' %}" class="card-img-top" alt="Doctor Registration">
+                    <div class="card-body text-center">
+                        <h4 class="card-title text-success">Create Account as Doctor</h4>
+                        <p class="card-text text-muted">Register as a doctor to manage patient data, provide consultations, and more.</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <button class="btn btn-success w-100">Register as Doctor</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Add Hover Effect -->
+<style>
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+</style>
+{% endblock %}

@@ -1,31 +1,26 @@
 {% extends 'index.html' %}
 {% load static %}
 {% block body %}
-    <!-- register -->
     <center>
         <section class="logins py-5">
             <div class="container py-xl-5 py-lg-3">
                 <div class="title-section mb-md-5 mb-4">
-                    <h6 class="w3ls-title-sub"></h6>
-                    <br><br>
                     <h3 class="w3ls-title text-uppercase text-dark font-weight-bold">Add Heart Detail</h3>
                 </div><hr/>
                 <div class="login px-sm-12" style="width:100%">
                     <form action="" method="post" enctype="multipart/form-data">
                         {% csrf_token %}
 
-                        <!-- Row 1: Age, Sex, Chest Pain, Resting BP, Cholesterol, Fasting BS -->
                         <div class="form-group row">
                             <div class="col-md-2">
                                 <label>Age (in years)</label>
-                                <input type="range" class="form-control" name="age" min="0" max="120" step="1" required="">
+                                <input type="number" class="form-control" name="age" min="0" max="120" step="1" required="">
                             </div>
                             <div class="col-md-2">
                                 <label>Sex</label>
                                 <select class="form-control" name="sex" required="">
                                     <option value="male">Male</option>
                                     <option value="female">Female</option>
-                                    <option value="other">Other</option>
                                 </select>
                             </div>
                             <div class="col-md-2">
@@ -64,7 +59,6 @@
                             </div>
                         </div>
 
-                        <!-- Row 2: ECG, Max Heart Rate, Exercise Induced, Oldpeak, Slope, Cardiac Arrest -->
                         <div class="form-group row">
                             <div class="col-md-2">
                                 <label>ECG</label>
@@ -106,7 +100,6 @@
                             </div>
                         </div>
 
-                        <!-- Row 3: Thalassemia -->
                         <div class="form-group row">
                             <div class="col-md-2">
                                 <label>Thalassemia</label>
@@ -118,12 +111,10 @@
                             </div>
                         </div>
 
-                        <!-- Submit Button -->
                         <button type="submit" class="btn submit mt-4" style="background-color: #726f6e;">Send Heart Data</button>
                     </form>
                 </div>
             </div>
         </section>
     </center>
-    <!-- //register -->
 {% endblock %}

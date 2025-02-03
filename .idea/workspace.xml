@@ -5,43 +5,57 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e967a4e0-fa6d-4b5a-9077-12cc49d12a07" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/health_desease.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/health_desease.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health/templates/choose_account_type.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health/templates/doctor_policy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health/templates/heart_care_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health/templates/patient_policy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health/templates/register_doctor.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/health/templates/register_patient.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/health/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/health/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health/templates/add_doctor.html" beforeDir="false" afterPath="$PROJECT_DIR$/health/templates/add_doctor.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/health/templates/add_heartdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/health/templates/add_heartdetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health/templates/admin_login.html" beforeDir="false" afterPath="$PROJECT_DIR$/health/templates/admin_login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health/templates/change_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/health/templates/change_password.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health/templates/edit_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/health/templates/edit_profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/health/templates/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/health/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/health/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/health/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health/templates/profile_doctor.html" beforeDir="false" afterPath="$PROJECT_DIR$/health/templates/profile_doctor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/health/templates/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health/templates/sent_feedback.html" beforeDir="false" afterPath="$PROJECT_DIR$/health/templates/sent_feedback.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health/templates/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/health/templates/single.html" beforeDir="false" afterPath="$PROJECT_DIR$/health/templates/single.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/health/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/health_desease/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/health_desease/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "minhdvikoi"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;minhdvikoi&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Kumar-laxmi/Heart-Disease-Prediction-System.git",
-    "accountId": "fbdc18fd-09ea-429e-815f-16c16bd5cf09"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Kumar-laxmi/Heart-Disease-Prediction-System.git&quot;,
+    &quot;accountId&quot;: &quot;fbdc18fd-09ea-429e-815f-16c16bd5cf09&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2sLodN6G2Jpb6AXGYHsEIlvcgAQ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -49,7 +63,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Python.manage.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Python.manage.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -80,7 +95,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
-      <option name="PARAMETERS" value="" />
+      <option name="PARAMETERS" value="runserver" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -111,6 +126,8 @@
       <option name="presentableId" value="Default" />
       <updated>1738244302335</updated>
       <workItem from="1738244303739" duration="6454000" />
+      <workItem from="1738508279391" duration="6681000" />
+      <workItem from="1738598179114" duration="5049000" />
     </task>
     <servers />
   </component>
@@ -124,10 +141,25 @@
           <url>file://$PROJECT_DIR$/health_desease/routing.py</url>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/health/views.py</url>
+          <line>272</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/health/views.py</url>
+          <line>274</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/health/views.py</url>
+          <line>271</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Heart_Disease_Prediction_System$manage.coverage" NAME="manage Coverage Results" MODIFIED="1738244411908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Heart_Disease_Prediction_System$manage.coverage" NAME="manage Coverage Results" MODIFIED="1738601894290" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

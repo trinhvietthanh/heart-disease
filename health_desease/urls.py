@@ -34,8 +34,11 @@ urlpatterns = [
     path('gallery', Gallery,name="gallery"),
     path('login', Login_User,name="login"),
     path('login_admin', Login_admin,name="login_admin"),
-    path('signup', Signup_User,name="signup"),
+    path('signup-patient', Signup_User,name="signup-patient"),
+    path('signup-doctor', signup_doctor, name="signup-doctor"),
+
     path('logout', Logout,name="logout"),
+    path('account-type', choose_account_type,name="account_type"),
     path('change_password', Change_Password,name="change_password"),
     # path('prdict_heart_disease', prdict_heart_disease,name="prdict_heart_disease"),
     path('add_heartdetail', add_heartdetail,name="add_heartdetail"),
@@ -56,5 +59,6 @@ urlpatterns = [
     path('delete_patient<int:pid>', delete_patient, name="delete_patient"),
     path('delete_feedback<int:pid>', delete_feedback, name="delete_feedback"),
     path('predict_desease/<str:pred>/<str:accuracy>/', predict_desease, name="predict_desease"),
-
+    path('policy-doctor', policy_doctor),
+    path('policy-patient', policy_patient),
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
