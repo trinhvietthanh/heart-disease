@@ -5,26 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e967a4e0-fa6d-4b5a-9077-12cc49d12a07" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/health/templates/choose_account_type.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health/templates/doctor_policy.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health/templates/heart_care_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health/templates/patient_policy.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health/templates/register_doctor.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/health/templates/register_patient.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/health/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/health/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health/templates/add_doctor.html" beforeDir="false" afterPath="$PROJECT_DIR$/health/templates/add_doctor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health/templates/add_heartdetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/health/templates/add_heartdetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/health/templates/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/health/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/health/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health/templates/register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/health/templates/single.html" beforeDir="false" afterPath="$PROJECT_DIR$/health/templates/single.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/health/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/health_desease/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/health_desease/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +108,7 @@
       <updated>1738244302335</updated>
       <workItem from="1738244303739" duration="6454000" />
       <workItem from="1738508279391" duration="6681000" />
-      <workItem from="1738598179114" duration="5049000" />
+      <workItem from="1738598179114" duration="5577000" />
     </task>
     <servers />
   </component>

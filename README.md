@@ -98,7 +98,7 @@ the system and what all are the diseases predicted by the system.*
 - Database:
   - ![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
 - #### Data-Set for training:
-  - <a href="https://github.com/Kumar-laxmi/Heart-Disease-Prediction-System/blob/main/Machine_Learning/heart.csv">Click here for DATA-SET</a>
+  - <a href="https://www.kaggle.com/datasets/redwankarimsony/heart-disease-data">Click here for DATA-SET</a>
 - #### IDE:
   - ![VS Code](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
   - ![pyCharm](https://img.shields.io/badge/PyCharm-000000.svg?&style=for-the-badge&logo=PyCharm&logoColor=white)
@@ -151,7 +151,7 @@ def prdict_heart_disease(list_data):
 
 ## Demo Video
 For demo video 
-<a href="https://amritacampuschennai-my.sharepoint.com/:v:/g/personal/ch_en_u4cse20005_ch_students_amrita_edu/ESuaLdQqmNdFjzSBcMiTpaABWPQ2kZWEwCJ53HsY3UdHHg">Click Here</a>
+<a href="">Click Here</a>
 
 ## Output Screen-shots
 When the application is runned then, a Welcome Page pops-up
@@ -174,6 +174,4 @@ If a user doesn't understand how to use the application then he can:
 
 To view registered Doctor information:
 <img src="https://github.com/Kumar-laxmi/Heart-Disease-Prediction-System/blob/main/SCREEN-SHOTS/DoctorRecords.png" />
-
-## NOTE: GitHub Pages is not working
 
