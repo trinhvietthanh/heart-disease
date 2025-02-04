@@ -120,6 +120,11 @@ Go to the project directory
 ```bash
   cd Heart-Disease-Prediction-System
 ```
+Install dependencies
+
+```bash
+  pip3 install -r requirement.txt
+```
 
 Start the server
 
