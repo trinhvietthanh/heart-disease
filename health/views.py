@@ -8,20 +8,12 @@ from sklearn.ensemble import GradientBoostingClassifier
 from .forms import DoctorForm
 from .models import *
 from django.contrib.auth import authenticate, login, logout
-import numpy as np
 import pandas as pd
 
-import matplotlib.pyplot as plt
-import seaborn as sns
-sns.set_style('darkgrid')
-
-from sklearn.preprocessing import StandardScaler, MinMaxScaler, RobustScaler
 from sklearn.model_selection import train_test_split
+import lime
+import lime.lime_tabular
 
-from sklearn.linear_model import LogisticRegression
-from sklearn.svm import SVC
-from sklearn.neural_network import MLPClassifier
-from django.http import HttpResponse
 # Create your views here.
 
 def Home(request):
@@ -111,11 +103,14 @@ def Login_admin(request):
         u = request.POST['uname']
         p = request.POST['pwd']
         user = authenticate(username=u, password=p)
-        if user.is_staff:
-            login(request, user)
-            error="pat"
+        if user is not None:
+            if user.is_staff:
+                login(request, user)
+                error="pat"
+            else:
+                error="not"
         else:
-            error="not"
+            error = "not"
     d = {'error': error}
     return render(request, 'admin_login.html', d)
 
@@ -229,6 +224,10 @@ def prdict_heart_disease(list_data):
     print("Prdicted Value is : ", format(pred))
     dataframe = str(df.head())
     return (nn_model.score(X_test, y_test) * 100),(pred)
+
+def server_heart_disease(data_point):
+    pred = nn_model.predict([data_point])
+    return pred
 
 @login_required(login_url="login")
 def add_doctor(request,pid=None):
