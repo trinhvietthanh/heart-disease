@@ -144,7 +144,7 @@ def prdict_heart_disease(list_data):
 
 ## Demo Video
 For demo video 
-<a href="/Demo-video/demo.mp4">Click Here</a>
+<a href="/demo/demo.mp4">Click Here</a>
 
 ## Output Screen-shots
 When the application is runned then, a Welcome Page pops-up

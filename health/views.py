@@ -293,7 +293,6 @@ def add_heartdetail(request):
                 continue
             list_data.append(value[0])
 
-        list_data = [57, 0, 1, 130, 236, 0, 0, 174, 0, 0.0, 1, 1, 2]
         accuracy,pred,img = prdict_heart_disease(list_data)
         patient = Patient.objects.get(user=request.user)
         Search_Data.objects.create(patient=patient, prediction_accuracy=accuracy, result=pred[0], values_list=list_data, image_path=img)
