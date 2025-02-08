@@ -97,6 +97,8 @@ the system and what all are the diseases predicted by the system.*
   - ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
 - Database:
   - ![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
+- ### Explain Result:
+  - Lime (https://github.com/marcotcr/lime)
 - #### Data-Set for training:
   - <a href="https://www.kaggle.com/datasets/redwankarimsony/heart-disease-data">Click here for DATA-SET</a>
 - #### IDE:
@@ -108,18 +110,6 @@ the system and what all are the diseases predicted by the system.*
   - ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 
 ## Run Locally
-
-Clone the project
-
-```bash
-  git clone https://github.com/Kumar-laxmi/Heart-Disease-Prediction-System
-```
-
-Go to the project directory
-
-```bash
-  cd Heart-Disease-Prediction-System
-```
 Install dependencies
 
 ```bash
@@ -181,8 +171,9 @@ To view registered Doctor information:
 To view registered Patient information:
 <img src="/SCREEN-SHOTS/Patient.png" />
 
-
 To choose account type:
 <img src="/SCREEN-SHOTS/user_choose.png">
 
+Policy:
+<img src="/SCREEN-SHOTS/policy.png">
 
