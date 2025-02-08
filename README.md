@@ -151,32 +151,38 @@ def prdict_heart_disease(list_data):
     return (nn_model.score(X_test, y_test) * 100),(pred)
 ```
 
-### For a detailed Report <a href="https://github.com/Kumar-laxmi/Heart-Disease-Prediction-System/blob/main/REPORT/PYTHON%20CAPSTONE%20PROJECT%20REPORT%20(TEAM%202).pdf">Click Here</a>
-
 
 ## Demo Video
 For demo video 
-<a href="">Click Here</a>
+<a href="/Demo-video/demo.mp4">Click Here</a>
 
 ## Output Screen-shots
 When the application is runned then, a Welcome Page pops-up
-<img src="https://github.com/Kumar-laxmi/Heart-Disease-Prediction-System/blob/main/SCREEN-SHOTS/WelcomePage.png" />
+<img src="/SCREEN-SHOTS/check.png" />
 
 Admin Dash-board:
-<img src="https://github.com/Kumar-laxmi/Heart-Disease-Prediction-System/blob/main/SCREEN-SHOTS/AdminDashboard.png" />
+<img src="/SCREEN-SHOTS/AdminDashboard.png" />
 
 Entering Heart Details to check our Health:
-<img src="https://github.com/Kumar-laxmi/Heart-Disease-Prediction-System/blob/main/SCREEN-SHOTS/AddHeartDetail.png" />
+<img src="/SCREEN-SHOTS/AddHeartDetail.png" />
 
 Since these details are stored in the Data-base, so we can also retrieve past results:
-<img src="https://github.com/Kumar-laxmi/Heart-Disease-Prediction-System/blob/main/SCREEN-SHOTS/SearchLogs1.png" />
+<img src="/SCREEN-SHOTS/SearchLogs1.png" />
 
 To view our own details:
-<img src="https://github.com/Kumar-laxmi/Heart-Disease-Prediction-System/blob/main/SCREEN-SHOTS/ViewMyDetaile.png" />
+<img src="/SCREEN-SHOTS/chos.png" />
 
 If a user doesn't understand how to use the application then he can:
-<img src="https://github.com/Kumar-laxmi/Heart-Disease-Prediction-System/blob/main/SCREEN-SHOTS/IntroductionViewVideo.png" />
+<img src="/SCREEN-SHOTS/IntroductionViewVideo.png" />
 
 To view registered Doctor information:
-<img src="https://github.com/Kumar-laxmi/Heart-Disease-Prediction-System/blob/main/SCREEN-SHOTS/DoctorRecords.png" />
+<img src="/SCREEN-SHOTS/Doctors.png" />
+
+To view registered Patient information:
+<img src="/SCREEN-SHOTS/Patient.png" />
+
+
+To choose account type:
+<img src="/SCREEN-SHOTS/user_choose.png">
+
 

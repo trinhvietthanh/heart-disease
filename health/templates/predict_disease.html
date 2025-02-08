@@ -20,6 +20,10 @@
             </p></center>
 
 			</div>
+                 {% if img %}
+                <h3>Prediction Explanation</h3>
+                <img src="{{ img }}" alt="LIME Explanation" />
+            {% endif %}
             {% if pred != "0" %}
 
             <div class="container-fluid" style="width:90%;margin-top:3%">

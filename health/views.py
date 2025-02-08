@@ -2,18 +2,20 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 import datetime
-
+import numpy as np
 from sklearn.ensemble import GradientBoostingClassifier
 
 from .forms import DoctorForm
 from .models import *
 from django.contrib.auth import authenticate, login, logout
 import pandas as pd
-
+import os
 from sklearn.model_selection import train_test_split
-import lime
-import lime.lime_tabular
+import matplotlib.pyplot as plt
 
+from lime.lime_tabular import LimeTabularExplainer
+from io import BytesIO
+import base64
 # Create your views here.
 
 def Home(request):
@@ -211,23 +213,46 @@ def preprocess_inputs(df, scaler):
 
 
 def prdict_heart_disease(list_data):
+    # Read CSV file
     csv_file = Admin_Helath_CSV.objects.get(id=1)
     df = pd.read_csv(csv_file.csv_file)
 
-    X = df[['age','sex','cp',  'trestbps',  'chol',  'fbs',  'restecg',  'thalach',  'exang',  'oldpeak',  'slope',  'ca',  'thal']]
+    # Features and labels
+    X = df[['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca',
+            'thal']]
     y = df['target']
     X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.8, random_state=0)
-    nn_model = GradientBoostingClassifier(n_estimators=100,learning_rate=1.0,max_depth=1, random_state=0)
-    nn_model.fit(X_train, y_train)
-    pred = nn_model.predict([list_data])
-    print("Neural Network Accuracy: {:.2f}%".format(nn_model.score(X_test, y_test) * 100))
-    print("Prdicted Value is : ", format(pred))
-    dataframe = str(df.head())
-    return (nn_model.score(X_test, y_test) * 100),(pred)
 
-def server_heart_disease(data_point):
-    pred = nn_model.predict([data_point])
-    return pred
+    # Train the model
+    nn_model = GradientBoostingClassifier(n_estimators=100, learning_rate=1.0, max_depth=1, random_state=0)
+    nn_model.fit(X_train, y_train)
+
+    # Convert list_data to 2D array (reshape from 1D to 2D)
+    list_data = np.array(list_data).reshape(1, -1)  # Convert list to 2D array
+
+    explainer = LimeTabularExplainer(X_train.values, training_labels=y_train.values, mode='classification',
+                                     feature_names=X_train.columns.tolist())
+    explanation = explainer.explain_instance(list_data[0], nn_model.predict_proba, num_features=5)
+
+    # Save explanation image locally
+    output_dir = 'media/lime_explanations/'
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+    import random
+    a = random.choice([1, 4, 8, 10, 3])
+    image_path = os.path.join(output_dir, f'explanation_{a}.png')
+    fig = explanation.as_pyplot_figure()
+    fig.savefig(image_path)
+    plt.close(fig)
+
+    # Predict the outcome
+    pred = nn_model.predict(list_data)
+    accuracy = nn_model.score(X_test, y_test) * 100
+    print(f"Neural Network Accuracy: {accuracy:.2f}%")
+    print(f"Predicted Value: {pred[0]}")
+
+    return accuracy, pred, image_path
+
 
 @login_required(login_url="login")
 def add_doctor(request,pid=None):
@@ -269,22 +294,24 @@ def add_heartdetail(request):
             list_data.append(value[0])
 
         list_data = [57, 0, 1, 130, 236, 0, 0, 174, 0, 0.0, 1, 1, 2]
-        accuracy,pred = prdict_heart_disease(list_data)
+        accuracy,pred,img = prdict_heart_disease(list_data)
         patient = Patient.objects.get(user=request.user)
-        Search_Data.objects.create(patient=patient, prediction_accuracy=accuracy, result=pred[0], values_list=list_data)
+        Search_Data.objects.create(patient=patient, prediction_accuracy=accuracy, result=pred[0], values_list=list_data, image_path=img)
         rem = int(pred[0])
         print("Result = ",rem)
         if pred[0] == 0:
             pred = "<span style='color:green'>You are healthy</span>"
         else:
             pred = "<span style='color:red'>You are Unhealthy, Need to Checkup.</span>"
-        return redirect('predict_desease', str(rem), str(accuracy))
+        doctor = Doctor.objects.filter(address__icontains=Patient.objects.get(user=request.user).address)
+        d = {'pred': pred, 'accuracy': accuracy, 'doctor': doctor, 'img': img}
+        return render(request, 'predict_disease.html', d)
     return render(request, 'add_heartdetail.html')
 
 @login_required(login_url="login")
-def predict_desease(request, pred, accuracy):
+def predict_desease(request, pred, accuracy, img):
     doctor = Doctor.objects.filter(address__icontains=Patient.objects.get(user=request.user).address)
-    d = {'pred': pred, 'accuracy':accuracy, 'doctor':doctor}
+    d = {'pred': pred, 'accuracy':accuracy, 'doctor':doctor, 'img':img}
     return render(request, 'predict_disease.html', d)
 
 @login_required(login_url="login")

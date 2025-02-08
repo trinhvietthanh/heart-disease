@@ -40,7 +40,7 @@ class Search_Data(models.Model):
     result = models.CharField(max_length=100,null=True,blank=True)
     values_list = models.CharField(max_length=100,null=True,blank=True)
     created = models.DateTimeField(auto_now=True,null=True)
-
+    image_path = models.FileField(null=True)
     def __str__(self):
         return self.patient.user.username
 
