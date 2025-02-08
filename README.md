@@ -110,9 +110,8 @@ the system and what all are the diseases predicted by the system.*
   - ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 
 ## Demo Video
-For demo video 
+- Click to view
 <a href="https://youtu.be/8tRgrn5xDdU" target="_blank"><img src="/SCREEN-SHOTS/check.png" width="450" alt="KDD promo video"/></a>
-
 
 ## Run Locally
 Install dependencies
