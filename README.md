@@ -1,83 +1,62 @@
-<img src="https://github.com/Kumar-laxmi/Heart-Disease-Prediction-System/blob/main/SCREEN-SHOTS/Heart-Disease-Prediction-System-banner.png" />
+<img src="/SCREEN-SHOTS/Heart-Disease-Prediction-System-banner.png" />
 
 ## Abstract 
 <p> 
-  Now days, Heart disease is the most common disease. But, unfortunately the treatment of heart
-disease is somewhat costly that is not affordable by common man. Hence, we can reduce this
-problem in some amount just by predicting heart disease before it becomes dangerous
-using Heart Disease Prediction System Using Machine Learning and Data mining. If we can
-find out heart disease problem in early stages then it becomes very helpful for
-treatment. Machine Learning and Data Mining techniques are used for the construction
-of Heart Disease Prediction System. In healthcare biomedical field, there is large use of heath
-care data in the form of text, images, etc but, that data is hardly visited and is not mined. So,
-we can avoid this problem by introducing Heart Disease Prediction System. This system will
-help us reduce the costs and to enhance the quality treatment of heart patients. This system can
-able to identify complex problems and can able to take intelligent medical decisions. The
-system can predict likelihood of patients of getting heart problems by their profiles such as
-blood pressure, age, sex, cholesterol and blood sugar. Also, the performance will be compared
-by calculation of confusion matrix. This can help to calculate accuracy, precision, and recall.
-The overall system provides high performance and better accuracy. 
+  Ngày nay, bệnh tim là bệnh phổ biến nhất. Tuy nhiên, điều trị bệnh tim khá tốn kém và không phải ai cũng có thể chi trả được. Do đó, chúng ta có thể giảm bớt vấn đề này một phần bằng cách dự đoán bệnh tim trước khi nó trở nên nguy hiểm thông qua Hệ thống Dự đoán Bệnh Tim sử dụng Học Máy và Khai thác Dữ liệu. Nếu chúng ta có thể phát hiện vấn đề bệnh tim ở giai đoạn đầu, điều đó sẽ rất hữu ích cho việc điều trị. Các kỹ thuật Học Máy và Khai thác Dữ liệu được sử dụng để xây dựng Hệ thống Dự đoán Bệnh Tim. Trong lĩnh vực y tế sinh học, có sự sử dụng rộng rãi dữ liệu y tế dưới dạng văn bản, hình ảnh, v.v., nhưng dữ liệu đó hiếm khi được xem xét và khai thác. Vì vậy, chúng ta có thể tránh được vấn đề này bằng cách giới thiệu Hệ thống Dự đoán Bệnh Tim. Hệ thống này sẽ giúp giảm chi phí và nâng cao chất lượng điều trị cho bệnh nhân tim. Hệ thống có thể xác định các vấn đề phức tạp và đưa ra các quyết định y tế thông minh. Hệ thống có thể dự đoán khả năng bệnh nhân mắc các vấn đề về tim dựa trên các chỉ số như huyết áp, tuổi, giới tính, cholesterol và đường huyết. Đồng thời, hiệu suất của hệ thống sẽ được so sánh qua việc tính toán ma trận nhầm lẫn. Điều này sẽ giúp tính toán độ chính xác, độ chuẩn và độ hồi tưởng. Tổng thể, hệ thống cung cấp hiệu suất cao và độ chính xác tốt hơn.
 </p>
 
 ## Introduction
 <p>
-  The health care industries collect huge amounts of data that contain some hidden information,
-which is useful for making effective decisions. For providing appropriate results and making
-effective decisions on data, some advanced data mining techniques are used. In this study, a
-Heart Disease Prediction System (HDPS) is developed using Naives Bayes and Decision Tree
-algorithms for predicting the risk level of heart disease. The system uses 13 medical parameters
-such as age, sex, blood pressure, cholesterol, and obesity for prediction. The HDPS predicts
-the likelihood of patients getting heart disease. It enables significant knowledge. E.g.
-Relationships between medical factors related to heart disease and patterns, to be established.
-We have employed the multilayer perceptron neural network with back propagation as the
-training algorithm. The obtained results have illustrated that the designed diagnostic system
-can effectively predict the risk level of heart diseases.
+Ngành công nghiệp chăm sóc sức khỏe thu thập một lượng lớn dữ liệu chứa thông tin tiềm ẩn, có ích cho việc đưa ra các quyết định hiệu quả. Để cung cấp kết quả chính xác và đưa ra các quyết định hiệu quả trên dữ liệu, một số kỹ thuật khai thác dữ liệu tiên tiến được sử dụng. Trong nghiên cứu này, một Hệ thống Dự đoán Bệnh Tim (HDPS) được phát triển sử dụng các thuật toán Naive Bayes và Decision Tree để dự đoán mức độ rủi ro của bệnh tim. Hệ thống sử dụng 13 tham số y tế như tuổi, giới tính, huyết áp, cholesterol và béo phì để thực hiện dự đoán. HDPS dự đoán khả năng bệnh nhân mắc bệnh tim. Nó cho phép rút ra kiến thức quan trọng, ví dụ như các mối quan hệ giữa các yếu tố y tế liên quan đến bệnh tim và các mô hình, để được thiết lập. Chúng tôi đã sử dụng mạng nơ-ron đa lớp với thuật toán lan truyền ngược (back propagation) làm thuật toán huấn luyện. Kết quả thu được đã chỉ ra rằng hệ thống chẩn đoán được thiết kế có thể dự đoán hiệu quả mức độ rủi ro của bệnh tim.
 </p>
 
 ### Aim
 <p> 
-  To predict heart disease according to input parameter values provided by user and dataset
-stored in database.
+Để dự đoán bệnh tim dựa trên các giá trị tham số đầu vào do người dùng cung cấp và dữ liệu được lưu trữ trong cơ sở dữ liệu, hệ thống có thể thực hiện các bước sau:
+
+- Thu thập dữ liệu đầu vào: Người dùng nhập các giá trị của các tham số y tế như tuổi, giới tính, huyết áp, cholesterol, đường huyết, v.v.
+
+- Tiền xử lý dữ liệu: Hệ thống xử lý và làm sạch dữ liệu từ cơ sở dữ liệu và các giá trị đầu vào của người dùng để chuẩn hóa hoặc chuyển đổi chúng thành định dạng phù hợp với mô hình dự đoán.
+
+- Sử dụng thuật toán học máy: Các thuật toán như Naive Bayes, Decision Tree hoặc Mạng Nơ-ron (Neural Networks) sẽ được áp dụng để phân tích và dự đoán mức độ rủi ro của bệnh tim dựa trên dữ liệu đầu vào và mô hình học đã được huấn luyện.
+
+- Dự đoán kết quả: Hệ thống đưa ra dự đoán về khả năng người dùng mắc bệnh tim, dựa trên các thông số y tế đã nhập và dữ liệu trong cơ sở dữ liệu.
+
+- Cung cấp kết quả và giải thích: Hệ thống cung cấp kết quả dự đoán, có thể kèm theo giải thích về mức độ rủi ro của người dùng, và thông tin về các yếu tố y tế ảnh hưởng đến tình trạng sức khỏe của họ.
 </p>
 
 ### Objective
 <p>
-  The main objective of this project is to develop a heart disease prediction system. The system
-can discover and extract hidden knowledge associated with diseases from a historical heart data
-set Heart disease prediction system aims to exploit data mining techniques on medical data set
-to assist in the prediction of the heart diseases.
+  Mục tiêu chính của dự án này là phát triển một hệ thống dự đoán bệnh tim. Hệ thống này có thể khám phá và trích xuất các kiến thức tiềm ẩn liên quan đến bệnh tật từ bộ dữ liệu lịch sử về bệnh tim. Hệ thống dự đoán bệnh tim nhằm khai thác các kỹ thuật khai thác dữ liệu trên bộ dữ liệu y tế để hỗ trợ trong việc dự đoán các bệnh tim.
+
+Bằng cách sử dụng các phương pháp khai thác dữ liệu, hệ thống sẽ phân tích các thông tin lịch sử về bệnh tim, tìm ra các mối quan hệ và mô hình giữa các yếu tố y tế, từ đó đưa ra những dự đoán chính xác hơn về nguy cơ mắc bệnh tim của bệnh nhân. Hệ thống này không chỉ giúp cải thiện chất lượng điều trị mà còn giảm chi phí chăm sóc sức khỏe bằng cách dự đoán sớm các nguy cơ tiềm ẩn.
 </p>
 
 ### Project Scope
 <p>
-  The project has a wide scope, as it is not intended to a particular organization. This project is
-going to develop generic software, which can be applied by any businesses organization.
-Moreover it provides facility to its users. Also the software is going to provide a huge amount
-of summary data.
+ Dự án này có phạm vi rộng, vì nó không chỉ dành cho một tổ chức cụ thể. Dự án này sẽ phát triển phần mềm tổng quát, có thể được áp dụng bởi bất kỳ tổ chức, doanh nghiệp nào. Hơn nữa, phần mềm này sẽ cung cấp các tính năng tiện ích cho người dùng của nó. Đồng thời, phần mềm cũng sẽ cung cấp một lượng lớn dữ liệu tổng hợp, giúp người dùng có cái nhìn tổng quát về các thông tin và kết quả phân tích, từ đó hỗ trợ trong việc đưa ra quyết định kinh doanh và chăm sóc sức khỏe.
+
+Điều này giúp mở rộng khả năng áp dụng của phần mềm, không chỉ trong lĩnh vực y tế mà còn có thể được sử dụng trong các ngành khác liên quan đến việc phân tích dữ liệu và dự đoán.
 </p>
 
 ## System Analysis
 ### Modules:
-- **Patient Login:-** *Patient Login to the system using his ID and Password.*
-- **Patient Registration:_** *If Patient is a new user he will enter his personal details and he
-will user Id and password through which he can login to the system.*
-- **My Details:-** *Patient can view his personal details.*
-- **Disease Prediction:-** *- Patient will specify the input parameter values. System will take
-input values and predict the disease based on the input data values specified by the
-patient and system will also suggest doctors based on the locality*
-- **Search Doctor:-** *Patient can search for doctor by specifying name, address or type.*
-- **Feedback:-** *Patient will give feedback this will be reported to the admin*
-- **Doctor Login:-** *Doctor will access the system using his User ID and Password.*
-- **Patient Details:-** *Doctor can view patient’s personal details.*
-- **Notification:-** *Admin and doctor will get notification how many people had accessed
-the system and what all are the diseases predicted by the system.*
-- **Admin Login:-** *Admin can login to the system using his ID and Password.*
-- **Add Doctor:-** *Admin can add new doctor details into the database.*
-- **Add Dataset:-** *Admin can add dataset file in database.*
-- **View Doctor:-** *Admin can view various Doctors along with their personal details.*
-- **View Disease:-** *Admin can view various diseases details stored in database.*
-- **View Patient:-** *Admin can view various patient details that had accessed the system.*
-- **View Feedback:-** *Admin can view feedback provided by various users.*
+- **Patient Login:-** *Bệnh nhân đăng nhập vào hệ thống bằng ID và mật khẩu của mình.*
+- **Patient Registration:_** *Nếu bệnh nhân là người dùng mới, họ sẽ nhập thông tin cá nhân và tạo ID cùng mật khẩu để có thể đăng nhập vào hệ thốn.*
+- **My Details:-** *Bệnh nhân có thể xem các thông tin cá nhân của mình.*
+- **Disease Prediction:-** *Bệnh nhân sẽ nhập các giá trị tham số đầu vào. Hệ thống sẽ nhận giá trị đầu vào và dự đoán bệnh dựa trên các giá trị dữ liệu đầu vào mà bệnh nhân đã chỉ định, đồng thời hệ thống cũng sẽ gợi ý các bác sĩ dựa trên khu vực địa lý của bệnh nhân*
+- **Search Doctor:-** *Bệnh nhân có thể tìm bác sĩ bằng cách chỉ định tên, địa chỉ hoặc loại bác sĩ.*
+- **Feedback:-** *Bệnh nhân sẽ đưa ra phản hồi và phản hồi này sẽ được báo cáo cho quản trị viên.*
+- **Doctor Login:-** *Bác sĩ sẽ truy cập vào hệ thống bằng ID người dùng và mật khẩu của mình.*
+- **Patient Details:-** *Bác sĩ có thể xem thông tin cá nhân của bệnh nhân.*
+- **Notification:-** *Quản trị viên và bác sĩ sẽ nhận được thông báo về số lượng người đã truy cập hệ thống và những bệnh nào đã được dự đoán bởi hệ thống.*
+- **Admin Login:-** *Quản trị viên có thể đăng nhập vào hệ thống bằng ID và mật khẩu của mình.*
+- **Add Doctor:-** *Quản trị viên có thể thêm thông tin bác sĩ mới vào cơ sở dữ liệu.*
+- **Add Dataset:-** *Quản trị viên có thể thêm tệp dữ liệu vào cơ sở dữ liệu.*
+- **View Doctor:-** *Quản trị viên có thể xem các bác sĩ cùng với thông tin cá nhân của họ.*
+- **View Disease:-** *Quản trị viên có thể xem các thông tin về các bệnh đã được lưu trữ trong cơ sở dữ liệu.*
+- **View Patient:-** *Quản trị viên có thể xem các thông tin bệnh nhân đã truy cập hệ thống.*
+- **View Feedback:-** *Quản trị viên có thể xem các phản hồi đã được cung cấp bởi người dùng.*
   
 ### Technology Used:
 - #### Languages:
@@ -148,33 +127,30 @@ def prdict_heart_disease(list_data):
 
 
 ## Output Screen-shots
-When the application is runned then, a Welcome Page pops-up
+Khi ứng dụng được chạy, một trang Chào mừng sẽ xuất hiện.
 <img src="/SCREEN-SHOTS/check.png" />
 
 Admin Dash-board:
 <img src="/SCREEN-SHOTS/AdminDashboard.png" />
 
-Entering Heart Details to check our Health:
+Nhập thông tin về bệnh tim để kiểm tra sức khỏe của bản thân:
 <img src="/SCREEN-SHOTS/AddHeartDetail.png" />
 
-Since these details are stored in the Data-base, so we can also retrieve past results:
+Vì những thông tin này được lưu trữ trong cơ sở dữ liệu, chúng ta cũng có thể truy xuất các kết quả trong quá khứ:
 <img src="/SCREEN-SHOTS/SearchLogs1.png" />
 
-To view our own details:
+Xem chi tiết tài khoản:
 <img src="/SCREEN-SHOTS/chos.png" />
 
-If a user doesn't understand how to use the application then he can:
-<img src="/SCREEN-SHOTS/IntroductionViewVideo.png" />
-
-To view registered Doctor information:
+Đăng ký tài khoản bác sĩ:
 <img src="/SCREEN-SHOTS/Doctors.png" />
 
-To view registered Patient information:
+Đăng ký tài khoản bệnh nhân:
 <img src="/SCREEN-SHOTS/Patient.png" />
 
-To choose account type:
+Lựa chọn tài khoản:
 <img src="/SCREEN-SHOTS/user_choose.png">
 
-Policy:
+Chính sách:
 <img src="/SCREEN-SHOTS/policy.png">
 
