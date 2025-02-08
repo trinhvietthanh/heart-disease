@@ -109,6 +109,11 @@ the system and what all are the diseases predicted by the system.*
   - ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
   - ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 
+## Demo Video
+For demo video 
+<a href="https://youtu.be/8tRgrn5xDdU" target="_blank"><img src="/SCREEN-SHOTS/check.png" width="450" alt="KDD promo video"/></a>
+
+
 ## Run Locally
 Install dependencies
 
@@ -142,9 +147,6 @@ def prdict_heart_disease(list_data):
 ```
 
 
-## Demo Video
-For demo video 
-<a href="/demo/demo.mp4">Click Here</a>
 
 ## Output Screen-shots
 When the application is runned then, a Welcome Page pops-up
